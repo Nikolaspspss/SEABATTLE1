@@ -84,11 +84,9 @@ class Board:
         self.contour(ship)
 
     def contour(self, ship, verb=False):
-        near = [
-            (-1, -1), (-1, 0), (-1, 1),
+        near = [(-1, -1), (-1, 0), (-1, 1),
             (0, -1), (0, 0), (0, 1),
-            (1, -1), (1, 0), (1, 1)
-        ]
+            (1, -1), (1, 0), (1, 1)]
         for d in ship.dots:
             for dx, dy in near:
                 cur = Dot(d.x + dx, d.y + dy)
@@ -220,12 +218,7 @@ class Game:
         return board
 
     def greet(self):
-        print("-------------------")
-        print("  Приветсвуем вас  ")
-        print("      в игре       ")
         print("    морской бой    ")
-        print("-------------------")
-        print(" формат ввода: x y ")
         print(" x - номер строки  ")
         print(" y - номер столбца ")
 
